@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flask Web App</title>
+</head>
+<body>
+    <h1>List Of Local Representatives</h1>
+    <button id="fetch-data">Fetch Representatives</button>
+    <div id="representatives-data"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#fetch-data').click(function() {
+                $.ajax({
+                    url: '/representatives', // Use relative URL to match Flask route
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        var output = '';
+                        data.forEach(function(representative) {
+                            output += 'Name: ' + representative.name + '<br>';
+                            output += 'Phones: ' + representative.phones.join(', ') + '<br>';      
+                            output += 'Body: ' + representative.roles + '<br><br>';
+                        });
+                        $('#representatives-data').html(output);
+                    },
+                    error: function(error) {
+                        console.error('Error fetching data:', error);
+                        $('#representatives-data').html('<p>Error fetching data. Please try again later.</p>');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
