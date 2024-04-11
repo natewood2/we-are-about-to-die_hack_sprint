@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, request
 import requests
 from flask_cors import CORS
 
@@ -7,16 +7,16 @@ CORS(app)
 
 @app.route('/')
 def index():
-    return render_template('representatives.html')
+    return render_template('index.html')
 
 @app.route('/representatives')
 def get_representatives_by_address():
+    zip_code = request.args.get('zip_code')
     # Make an HTTP request to the external API
     response = requests.get('https://www.googleapis.com/civicinfo/v2/representatives', params={
         'key': 'AIzaSyD9T84S66sWgnBtzj8b0Xc7gnpGNybNanA',
-        'address': '74105',
-        'roles': 'legislatorLowerBody',
-        'roles': 'legislatorUpperBody',
+        'address': zip_code,
+        'roles': ['legislatorLowerBody', 'legislatorUpperBody']
     })
     # Check if the request was successful (status code 200)
     if response.status_code == 200:
