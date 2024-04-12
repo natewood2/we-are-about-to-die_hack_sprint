@@ -11,6 +11,7 @@ def index():
 
 @app.route('/representatives')
 def get_representatives_by_address():
+    # Get the zip from the index.html
     zip_code = request.args.get('zip_code')
     # Make an HTTP request to the external API
     response = requests.get('https://www.googleapis.com/civicinfo/v2/representatives', params={
