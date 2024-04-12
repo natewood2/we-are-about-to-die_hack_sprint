@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>We Are About To Die</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <!-- HEADER SECTION -->
@@ -25,6 +27,19 @@
             <img src="assets/logo.svg" alt="WeAreAboutToDieLogo">
         </div>
     </header>
+    <!-- Corousel Section -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/Chevron.svg" alt="Chevron"></div>
+          <div class="swiper-slide"><img src="assets/Exxon.svg" alt="Exxon"></div>
+          <div class="swiper-slide"><img src="assets/chinacoal.svg" alt="China Coal"></div>
+          <div class="swiper-slide"><img src="assets/Gazprom.svg" alt="Gazprom"></div>
+          <div class="swiper-slide"><img src="assets/NOIC.svg" alt="NOIC"></div>
+          <div class="swiper-slide"><img src="assets/saudiamerico.svg" alt="Saudi Americo"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
     <!-- RESOURCES SECTION -->
     <div class="resources">
         <div>
@@ -78,6 +93,22 @@
             <div id="representatives-data"></div>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
                 <script>
+                    var swiper = new Swiper('.mySwiper', {
+                    slidesPerView: 3,
+                    centeredSlides: true,
+                    spaceBetween: 30,
+                    loop: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    keyboard: {
+                        enabled: true,
+                        onlyInViewport: true,
+                    }
+                });
+                </script>
+                <script>
                     $(document).ready(function() {
                         $('#fetch-data').click(function() {
                             var zipCode = $('#zip-code').val();
@@ -104,5 +135,6 @@
                 </script>
         </div>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
