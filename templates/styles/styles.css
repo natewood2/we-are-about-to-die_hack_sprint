@@ -1,0 +1,47 @@
+/* BODY STYLING */
+body {
+    margin: 0%;
+}
+
+/* HEADER STYLING */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: .2rem;
+}
+
+.logo img {
+    width: 10rem;
+}
+
+/* NAV BAR STYLING */
+
+.navBar nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navBar nav ul li {
+    display: inline;
+}
+
+.navBar nav ul li a {
+    text-decoration: none;
+    color: #000;    
+    padding: 10px;
+}
+
+.navBar nav ul li a:hover {
+    color: gray;
+}
+
