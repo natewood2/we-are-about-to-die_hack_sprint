@@ -19,7 +19,7 @@ def get_representatives_by_address():
         'address': zip_code,
         'roles': ['legislatorLowerBody', 'legislatorUpperBody']
     })
-    # Check if the request was successful (status code 200)
+    # Check if the request was successful
     if response.status_code == 200:
         # Parse the JSON response
         data = response.json()

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Are About To Die</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- RESOURCES SECTION -->
+    <div class="resources">
+        <div>
+            <h1>Get Involved!</h1>
+        </div>
+        <!-- PETITIONS SECTION -->
+        <div class="petitions">
+            <h2>Petitions</h2>
+            <div class="links">
+            <ul>
+                <li><a href="https://www.change.org/t/climate-justice-en-us">Change.org</a></li>
+                <li><a href="https://preserve.nature.org/page/81465/petition/1?locale=en-US">PreserveNature.org</a></li>
+                <li><a href="https://www.edf.org/action">EDF.org</a></li>
+            </ul>
+            </div>
+        </div>
+        <!-- VOTING SECTION -->
+        <div class="voting">
+            <div>
+                <h2>Voting Resources</h2>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="https://vote.gov/">Vote.gov</a></li>
+                    <li><a href="https://www.vote.org/">Vote.org</a></li>
+                    <li><a href="https://www.lwv.org/">League Of Women Voters</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- VOLUNTEERING SECTION -->
+        <div class="volunteering">
+            <div>
+                <h2>Volunteer Resources</h2>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="https://350.org/get-involved/?r=US&c=NA">350.org</a></li>
+                    <li><a href="https://climatejusticealliance.org/get-involved/">Climate Justice Alliance</a></li>
+                    <li><a href="https://citizensclimatelobby.org/join-citizens-climate-lobby/">Citizens Climate Lobby</a></li>
+                    <li><a href="https://www.lcv.org/programs/climate-action-program/">LCV Climate Action Volunteer Program</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- REPRESENTATIVES SECTION -->
+        <div class="representatives">
+            <div>
+                <h2>Let Your Voice Be Heard!</h2>
+            </div>
+            <input type="text" id="zip-code" name="zip-code" placeholder="Enter ZIP code">
+            <button id="fetch-data">Get Representatives</button>
+            <div id="representatives-data"></div>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        $('#fetch-data').click(function() {
+                            var zipCode = $('#zip-code').val();
+                            $.ajax({
+                                url: '/representatives', // Use relative URL to match Flask route
+                                type: 'GET',
+                                dataType: 'json',
+                                data: {'zip_code': zipCode},
+                                success: function(data) {
+                                    var output = '';
+                                    data.forEach(function(representative) {
+                                        output += 'Name: ' + representative.name + '<br>';
+                                        output += 'Phones: ' + representative.phones.join(', ') + '<br><br>';      
+                                    });
+                                    $('#representatives-data').html(output);
+                                },
+                                error: function(error) {
+                                    console.error('Error fetching data:', error);
+                                    $('#representatives-data').html('<p>Error fetching data. Please try again later.</p>');
+                                }
+                            });
+                        });
+                    });
+                </script>
+        </div>
+    </div>
+</body>
+</html>
