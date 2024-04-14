@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>We Are About To Die</title>
-    <link rel="stylesheet" <link ... href="{{ url_for('static', filename='/styles/styles.css') }}" />>
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- HEADER SECTION -->
@@ -20,61 +21,68 @@
                     <div class="nav2">
                         <li><a href="impacts.html">Human Impacts</a></li>
                     </div>
+                    <li><a href="#actionsSection">What Can You Do?</a></li>
                 </ul>
             </nav>
         </div>
         <div class="logo">
-            <img src="static/images/logo.svg" alt="WeAreAboutToDieLogo">
+            <img src="images/logo.svg" alt="WeAreAboutToDieLogo">
         </div>
     </header>
     <!-- Corousel Section -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="static/images/Chevron.svg" alt="Chevron"></div>
-          <div class="swiper-slide"><img src="static/images/Exxon.svg" alt="Exxon"></div>
-          <div class="swiper-slide"><img src="static/images/chinacoal.svg" alt="China Coal"></div>
-          <div class="swiper-slide"><img src="static/images/Gazprom.svg" alt="Gazprom"></div>
-          <div class="swiper-slide"><img src="static/images/NOIC.svg" alt="NOIC"></div>
-          <div class="swiper-slide"><img src="static/images/saudiamerico.svg" alt="Saudi Americo"></div>
+          <div class="swiper-slide"><img src="images/Chevron.svg" alt="Chevron"></div>
+          <div class="swiper-slide"><img src="images/Exxon.svg" alt="Exxon"></div>
+          <div class="swiper-slide"><img src="images/chinacoal.svg" alt="China Coal"></div>
+          <div class="swiper-slide"><img src="images/Gazprom.svg" alt="Gazprom"></div>
+          <div class="swiper-slide"><img src="images/NOIC.svg" alt="NOIC"></div>
+          <div class="swiper-slide"><img src="images/saudiamerico.svg" alt="Saudi Americo"></div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
       </div>
+    <!-- Human Impact Section -->
+    <div class="svg-container">
+        <img src="images/HumanImpact.svg" alt="Human Impact" style="width: 100%; height: auto;">
+    </div>
+    <!-- OH FOREST FIRES!!! -->
+    <div id="forest-fire-svg">
+        <img src="images/Untitled-2.jpg" alt="Climate Change representation">
+    </div>
+    <!-- Dry Crops -->
+    <div id="dry-crop">
+        <img src="images/newCrops.jpg" alt="Picture of Dry Crops">
+    </div>
+    <!-- Economic Impact -->
+    <div id="econ-impact">
+        <img src="images/homelessness.jpg" alt="Economic Impact">
+    </div>
     <!-- RESOURCES SECTION -->
-    <div class="resources">
-        <div>
-            <h1>Get Involved!</h1>
+    <div id="actionsSection">
+        <div class="wcyd">
+            <img src="images/replacement.png" alt="wcyd" style="width: 100%; height: auto;">
         </div>
         <!-- PETITIONS SECTION -->
-        <div class="petitions">
-            <h2>Petitions</h2>
-            <div class="links">
-            <ul>
-                <li><a href="https://www.change.org/t/climate-justice-en-us">Change.org</a></li>
-                <li><a href="https://preserve.nature.org/page/81465/petition/1?locale=en-US">PreserveNature.org</a></li>
-                <li><a href="https://www.edf.org/action">EDF.org</a></li>
-            </ul>
+        <div class="resources-footer">
+            <div class="resources-section petitions">
+                <h1>Petitions</h1>
+                <ul>
+                    <li><a href="https://www.change.org/t/climate-justice-en-us">Change.org</a></li>
+                    <li><a href="https://preserve.nature.org/page/81465/petition/1?locale=en-US">PreserveNature.org</a></li>
+                    <li><a href="https://www.edf.org/action">EDF.org</a></li>
+                </ul>
             </div>
-        </div>
-        <!-- VOTING SECTION -->
-        <div class="voting">
-            <div>
-                <h2>Voting Resources</h2>
-            </div>
-            <div class="links">
+            <div class="resources-section voting">
+                <h1>Voting Resources</h1>
                 <ul>
                     <li><a href="https://vote.gov/">Vote.gov</a></li>
                     <li><a href="https://www.vote.org/">Vote.org</a></li>
                     <li><a href="https://www.lwv.org/">League Of Women Voters</a></li>
                 </ul>
             </div>
-        </div>
-        <!-- VOLUNTEERING SECTION -->
-        <div class="volunteering">
-            <div>
-                <h2>Volunteer Resources</h2>
-            </div>
-            <div class="links">
+            <div class="resources-section volunteering">
+                <h1>Volunteer Resources</h1>
                 <ul>
                     <li><a href="https://350.org/get-involved/?r=US&c=NA">350.org</a></li>
                     <li><a href="https://climatejusticealliance.org/get-involved/">Climate Justice Alliance</a></li>
@@ -82,14 +90,13 @@
                     <li><a href="https://www.lcv.org/programs/climate-action-program/">LCV Climate Action Volunteer Program</a></li>
                 </ul>
             </div>
-        </div>
-        <!-- REPRESENTATIVES SECTION -->
-        <div class="representatives">
-            <div>
-                <h2>Let Your Voice Be Heard!</h2>
+            <div class="resources-section representatives">
+                <h1>Let Your Voice Be Heard!</h1>
+                <input type="text" id="zip-code" name="zip-code" placeholder="Enter ZIP code">
+                <button id="fetch-data">Get Representatives</button>
+                <div id="representatives-data"></div>
             </div>
-            <input type="text" id="zip-code" name="zip-code" placeholder="Enter ZIP code">
-            <button id="fetch-data">Get Representatives</button>
+        </div>
             <div id="representatives-data"></div>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
                 <script>
