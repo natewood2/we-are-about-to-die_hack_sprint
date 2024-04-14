@@ -84,6 +84,36 @@ header {
     }
 }
 
+
+/* BLACK OVERLAY FOR IMAGES */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#dry-crop,
+#forest-fire-svg,
+#econ-impact {
+    position: relative;
+}
+
+#dry-crop .overlay,
+#forest-fire-svg .overlay,
+#econ-impact .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* IMAGES FOR IMPACTS */
+
 #forest-fire-svg {
     width: 100%;
     margin: 0;
@@ -108,6 +138,7 @@ header {
     width: 100%;
     height: auto;
     display: block;
+
 }
 
 #econ-impact {
