@@ -254,8 +254,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    min-height: 50vh;
+    min-height: 25vh;
     box-sizing: border-box;
 }
 
