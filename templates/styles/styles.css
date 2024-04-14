@@ -154,6 +154,8 @@ header {
     display: block;
 }
 
+/* WHAT CAN YOU DO SECTION */
+
 .wcyd {
     display: flex;
     justify-content: center;
@@ -267,6 +269,8 @@ header {
     }
 }
 
+/* LOADING SCREEN  */
+
 #loading-screen {
     position: fixed;
     top: 0;
@@ -294,3 +298,6 @@ header {
     max-width: 400px;
     height: auto;
 }
+
+/* COMPANY ARTICLES STYLING */
+
