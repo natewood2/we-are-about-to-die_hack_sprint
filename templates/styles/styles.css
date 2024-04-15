@@ -301,3 +301,37 @@ header {
 
 /* COMPANY ARTICLES STYLING */
 
+/* Savanna Styling */
+
+.human-impact {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#forest-fire {
+    position: relative;
+}
+
+#food {
+    position: relative;
+}
+
+#econ-impact {
+    position: relative;
+}
+  
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.human-imgs img {
+    width: 100%;
+    height: auto;
+  }
