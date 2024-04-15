@@ -95,65 +95,6 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#dry-crop,
-#forest-fire-svg,
-#econ-impact {
-    position: relative;
-}
-
-#dry-crop .overlay,
-#forest-fire-svg .overlay,
-#econ-impact .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* IMAGES FOR IMPACTS */
-
-#forest-fire-svg {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-#forest-fire-svg img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-#dry-crop {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-#dry-crop img {
-    width: 100%;
-    height: auto;
-    display: block;
-
-}
-
-#econ-impact {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-#econ-impact img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 /* WHAT CAN YOU DO SECTION */
 
 .wcyd {
@@ -329,9 +270,21 @@ header {
     padding: 20px;
     text-align: center;
     color: white;
+    font-size: 1em;
+    width: 75%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .human-imgs img {
     width: 100%;
     height: auto;
   }
+
+.human-imgs {
+    display: flex;
+    flex-direction: column;
+}
+
