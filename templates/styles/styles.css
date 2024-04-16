@@ -42,12 +42,12 @@ header {
 
 .navBar nav ul li a {
     text-decoration: none;
-    color: #000;    
+    color: black;    
     padding: 1rem;
 }
 
 .navBar nav ul li a:hover {
-    color: gray;
+    color: #747474;
 }
 
 /* RESPONSIVE NAR BAR STYLING */
@@ -95,6 +95,36 @@ header {
     }
 }
 
+/* HERO SECTION */
+.hero {
+    align-items: center;
+    background-color: #F7f7f7;
+    padding: 3rem;
+    width: 70%;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hero h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.border {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #747474;
+}
 /* WHAT CAN YOU DO SECTION */
 
 .wcyd {
