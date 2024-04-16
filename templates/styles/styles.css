@@ -343,3 +343,72 @@ header {
 #humanImpactSection p {
     padding-bottom: 0.5em;
 }
+
+
+/* COMAPNY ARTICLE STYLING */
+
+.companyArticles {
+    margin: 0.5rem;
+}
+
+.articles {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.company-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.company-header img {
+    width: 150px;
+}
+
+.company-header h1 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.articleText{
+    font-size: 16px;
+    line-height: 1.6;
+    flex: 1;
+    text-align: justify;
+    padding-bottom: 0;
+}
+
+.company-logo {
+    position: relative;
+    width: 25%;
+    padding-top: 5rem;
+}
+
+.articleText h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.content-1 {
+    display: flex;
+    padding-bottom: 0;
+}
+
+#articleText1 {
+    padding-right: 2rem;
+}
+
+#articleText2 {
+    padding-left: 2rem;
+}
+
+#articleText3 {
+    padding-bottom: 3rem;
+}
+
+.content-2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 1rem;
+}
