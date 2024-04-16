@@ -3,6 +3,8 @@ body {
     margin: 0%;
     background-color: #F7f7f7;
     font-family: 'Roboto', sans-serif;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 /* HEADER STYLING */
@@ -97,26 +99,21 @@ header {
 
 /* HERO SECTION */
 .hero {
-    align-items: center;
-    background-color: #F7f7f7;
-    padding: 6rem;
+    display: flex;
+    flex-direction: column;
     width: 70%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin: auto;
+}
+
+.hero-text {
+    text-align: center;
+    padding-top: 1rem;
 }
 
 .hero h1 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.hero h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 55px;
 }
 
 .border {
@@ -132,7 +129,7 @@ header {
     justify-content: center;
     align-items: center;
     min-height: 15vh;
-    padding-top: 2rem;
+    padding-top: 4rem;
     box-sizing: border-box;
 }
 
@@ -175,7 +172,7 @@ header {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto;
     gap: 0.5rem;
-    padding: 1rem;
+    padding: 2rem;
     background-color: #f7f7f7;
 }
 
