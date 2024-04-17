@@ -412,3 +412,23 @@ header {
     border-bottom: 2px solid #ccc;
     padding-bottom: 1rem;
 }
+
+/* FOOTER STYLING */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F7f7f7;
+    border-top: .7px solid #747474;
+    font-family: 'Metrophobic', sans-serif;
+    padding: 0.5rem;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer a:hover {
+    color: gray;
+}
