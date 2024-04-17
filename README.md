@@ -17,10 +17,10 @@ Ultimately, "We Are About to Die" empowers individuals to become agents of chang
 ## Installation
 Navigate to https://github.com/natewood2/we-are-about-to-die_hack_sprint
 
-```git clone https://github.com/natewood2/we-are-about-to-die_hack_sprint```
+Enter the command: ```git clone https://github.com/natewood2/we-are-about-to-die_hack_sprint```
 
 ## Usage
-To use, simply run app.py (for the api calls)
+To use, simply run ```python app.py```
 
 or open a live server to see the static styling
 
