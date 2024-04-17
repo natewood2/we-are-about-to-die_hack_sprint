@@ -1,4 +1,4 @@
-# we are about to die
+# we are about to die - Flask Web App 
 
 ## Description
 "We Are About to Die" is a vital platform designed to inform and inspire individuals to take meaningful action against climate change. With global temperatures on the rise and the effects of climate change becoming increasingly apparent, it's crucial to raise awareness about the urgency of the situation.
