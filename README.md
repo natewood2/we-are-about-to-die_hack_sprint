@@ -9,11 +9,6 @@ Moreover, the app goes beyond awareness-raising by facilitating direct engagemen
 
 Ultimately, "We Are About to Die" empowers individuals to become agents of change in the fight against climate change. By equipping users with knowledge, resources, and opportunities for action, the platform aims to foster a global community of climate activists working towards a sustainable and resilient future for our planet.
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-
 ## Installation
 Navigate to https://github.com/natewood2/we-are-about-to-die_hack_sprint
 
