@@ -12,23 +12,22 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #F7f7f7;
-    border-bottom: .7px solid #747474;
+    background-color: #F7F7F7;
+    border-bottom: 0.7px solid #747474;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    padding: .2rem;
+    padding: 0.2rem;
     padding-left: 0;
 }
 
 .logo img {
-    width: 10rem;
+    width: 10rem;  /* Adjust image size as needed */
 }
 
 /* NAV BAR STYLING */
-
 .navBar nav ul {
     list-style-type: none;
     margin: 0;
@@ -44,21 +43,12 @@ header {
 
 .navBar nav ul li a {
     text-decoration: none;
-    color: black;    
+    color: black;
     padding: 1rem;
 }
 
 .navBar nav ul li a:hover {
     color: #747474;
-}
-
-/* RESPONSIVE NAR BAR STYLING */
-
-@media only screen and (max-width: 600px) {
-    .navBar nav ul li {
-        font-size: 1.05em;
-        display: inline-block;
-    }
 }
 
 .swiper-slide {
@@ -309,15 +299,26 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
     color: white;
-    font-size: 1.5em;
-    width: 70%;
+    font-size: 1em;
+    width: 90%;
     background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.55);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+    .text-overlay {
+        padding: 2rem;
+        font-size: 1.5em;
+        width: 70%;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.55);
+    }
 }
 
 .human-imgs img {
@@ -429,6 +430,53 @@ footer li {
     list-style: none;
 }
 
+footer a {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 2px solid #7394c1;
+    border-radius: 15px;
+    color: #7394c1;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 5px;
+}
+
 footer a:hover {
-    color: gray;
+    background-color: #7394c1;
+    color: #ffffff;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navBar {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navBar nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navBar nav ul li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navBar.active {
+        display: flex;
+    }
 }
